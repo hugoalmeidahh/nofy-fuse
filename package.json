@@ -1,0 +1,33 @@
+{
+  "name": "nofy-fuse",
+  "version": "1.0.0",
+  "description": "Base template Applictation",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start:dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsup src --out-dir build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@prisma/client": "5.7.0",
+    "@fastify/jwt": "7.2.4",
+    "bcryptjs": "2.4.3",
+    "dotenv": "16.3.1",
+    "eslint": "8.55.0",
+    "fastify": "^4.24.3",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "2.1.0",
+    "@types/bcryptjs": "2.4.6",
+    "@types/node": "^20.10.4",
+    "prisma": "5.7.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.3"
+  }
+}

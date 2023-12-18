@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum RoleEnumType {
+  USER
+  ADMIN
+  ROOT
+}
+
+model User {
+  id            String    @id @default(uuid())
+  name          String
+  email         String    @unique
+  password_hash String
+  actived_at    DateTime?
+  created_at    DateTime  @default(now())
+  company_id    String?
+
+  company Company?      @relation(fields: [company_id], references: [id])
+  role    RoleEnumType? @default(USER)
+
+  @@map("users")
+}
+
+model Company {
+  id         String   @id @unique @default(uuid())
+  name       String
+  cnpj       String
+  address    String
+  cep        String
+  city       String
+  state      String
+  country    String
+  userId     String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  users   User[]
+  clients Client[]
+
+  @@map("companies")
+}
+
+model Client {
+  id           String   @id @unique @default(uuid())
+  name         String
+  abbreviation String
+  cnpj         String
+  code         String
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+
+  company    Company? @relation(fields: [company_id], references: [id])
+  company_id String?
+
+  @@map("clients")
+}
