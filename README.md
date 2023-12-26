@@ -27,14 +27,14 @@ Base Application - template
 O projeto **Base Node API** é uma base para criar serviços backend com NodeJs.
 
 
-# 🚀 Techonologies
+# 🚀&nbsp; Techonologies
 - NodeJs
 - Fastify (JWT, CORS)
 - Prisma
 - Typescript
 - EsLint (Rocketseat configs)
 
-## 🛠️ Instalation
+## 🛠️&nbsp; Instalation
 
 1. Need make the env file!
 2. Need install all dependencies
@@ -48,7 +48,7 @@ npm install
 docker-compose up
 ```
 
-## 🏃 Run application
+## 🏃&nbsp; Run application
 
 ```bash
 npm run dev # development
@@ -61,14 +61,14 @@ npm run test:dev # watch mode
 npm run test #ci
 ``` -->
 
-## ✨ Branch patterns 
+## ✨&nbsp; Branch patterns 
 Follow this patterns:
 - New branchs:  feature/[StoryID]
                 bugfix/[BugID]
                 release/[ReleaseCardId]
 
 
-## ✨ Patterns Commit - Commitlint
+## ✨&nbsp; Patterns Commit - Commitlint
 Follow the Conventional Commits: 
 
 ### Conventional Commits types for using:: 
@@ -89,5 +89,6 @@ Follow the Conventional Commits:
 ```
 
 ---
+## Developers
 Developed :bowtie: by Hugo Almeida
 For support or suggestions : hugoalmeidahh@gmail.com
