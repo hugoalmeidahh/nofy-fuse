@@ -1,8 +1,11 @@
+import { promises } from 'dns'
 import {
+  IFindUserByIdResquest,
   IRegisterUsersRequest,
   IRegisterUsersResponse,
   ISaveUsersRequest,
   ISaveUsersResponse,
+  IUserResponse,
 } from './interface'
 import { UsersPrismaRepository } from './repositories/prisma/users.prisma.repository'
 import { hash } from 'bcryptjs'
@@ -28,6 +31,22 @@ export class UserServices {
       email,
       password_hash,
     })
+
+    return { user }
+  }
+
+  async findAll(): Promise<IUsersResponse> {
+    const users = await this.usersRepository.findAll()
+
+    return { users }
+  }
+
+  async findById({ id }: IFindUserByIdResquest): Promise<IUserResponse> {
+    const user = await this.usersRepository.findById(id)
+
+    if (!user) {
+      throw new Error()
+    }
 
     return { user }
   }

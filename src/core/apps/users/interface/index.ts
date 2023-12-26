@@ -23,6 +23,14 @@ export interface ISaveUsersResponse {
   user: User
 }
 
+export interface IFindUserByIdResquest {
+  id: string
+}
+
+export interface IUserResponse {
+  user: User
+}
+
 export interface IUserUpdate {
   id: string
   name?: string
@@ -33,5 +41,5 @@ export interface IUserUpdate {
 
 export interface IUsersRepository extends IRepository<User> {
   findByEmail(email: string): Promise<User | null>
-  save(data: IUserUpdate): Promise<User>
+  // save(data: IUserUpdate): Promise<User>
 }

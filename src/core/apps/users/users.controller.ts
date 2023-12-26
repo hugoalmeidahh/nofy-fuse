@@ -32,9 +32,9 @@ async function create(request: FastifyRequest, reply: FastifyReply) {
 }
 
 const readAll = async (request: FastifyRequest, reply: FastifyReply) => {
-  const users = await prisma.user.findMany()
-  console.log(users)
-  return reply.status(200).send(users)
+  // const users = await prisma.user.findMany()
+  // console.log(users)
+  // return reply.status(200).send(users)
 }
 
 export default {
