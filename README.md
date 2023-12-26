@@ -1,19 +1,11 @@
 # Nofy-Fuse
 
-Base template Applictation
+Base Application - template
 
-## RFs (Functional request)
+# Techonologies
+- NodeJs
+- Fastify (JWT, CORS)
+- Prisma
+- Typescript
+- EsLint (Rocketseat configs)
 
-- [ ] Deve ser possível X...;
-- [ ] Deve ser possível se Cadastrar;
-- [ ] Deve ser possível se Autenticar;
-- [ ] Deve ser possível obter perfil do usuário logado;
-- [ ]  
-
-## RNs 
-
-- [ ] 
-
-## RNFs
-
-- [ ] 
