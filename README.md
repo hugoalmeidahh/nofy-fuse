@@ -1,16 +1,14 @@
 ###### **Nofy-Fuse**
 
 <h1 align="center">
-    Nofy-Fuse
+    <img width="200" src="./nofy_fuse.png">
 </h1>
 <h3 align="center">
     
-Base Application 🚀 - template
+Backend base application 🚀 - template
 </h1>
 
-<!--<h1>
-    <img src="public/apresentacao.gif">
-</h1> -->
+
 <!-- 
 <h3 align="center">
     <a href="">Acessar a demonstração</a>
