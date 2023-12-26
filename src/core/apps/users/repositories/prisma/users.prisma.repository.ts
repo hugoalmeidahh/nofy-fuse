@@ -1,8 +1,13 @@
 import { prisma } from 'src/core/database/prisma'
 import { Prisma } from '@prisma/client'
-import { IUsersRepository, IUserUpdate } from '../../interface'
+import { IUsersRepository } from '../../interface'
 
 export class UsersPrismaRepository implements IUsersRepository {
+  async findAll() {
+    const users = await prisma.user.findMany()
+    return users
+  }
+
   async findByEmail(email: string) {
     const user = await prisma.user.findUnique({ where: { email } })
     return user
@@ -20,13 +25,21 @@ export class UsersPrismaRepository implements IUsersRepository {
     return user
   }
 
-  async save(data: IUserUpdate) {
+  async save(data: Prisma.UserUpdateInput) {
+    const { id, ...updateData } = data
+    if (!id) {
+      throw new Error('More parameters is needed for updating.')
+    }
+
+    if (typeof id !== 'string') {
+      throw new Error('ID is a wrong!')
+    }
+
     const user = await prisma.user.update({
-      where: {
-        id: data?.id,
-      },
-      data,
+      where: { id: id as string },
+      data: updateData,
     })
+
     return user
   }
 }

@@ -6,6 +6,7 @@ import {
   ISaveUsersRequest,
   ISaveUsersResponse,
   IUserResponse,
+  IUsersResponse,
 } from './interface'
 import { UsersPrismaRepository } from './repositories/prisma/users.prisma.repository'
 import { hash } from 'bcryptjs'
@@ -37,7 +38,6 @@ export class UserServices {
 
   async findAll(): Promise<IUsersResponse> {
     const users = await this.usersRepository.findAll()
-
     return { users }
   }
 

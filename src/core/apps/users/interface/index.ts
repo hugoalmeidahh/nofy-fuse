@@ -1,6 +1,7 @@
 import { User } from '@prisma/client'
 import { IRepository } from 'src/core/database/iRepository'
 
+// Register
 export interface IRegisterUsersRequest {
   name: string
   email: string
@@ -11,6 +12,7 @@ export interface IRegisterUsersResponse {
   user: User
 }
 
+// Save
 export interface ISaveUsersRequest {
   id: string
   name?: string
@@ -23,6 +25,7 @@ export interface ISaveUsersResponse {
   user: User
 }
 
+// Find
 export interface IFindUserByIdResquest {
   id: string
 }
@@ -39,7 +42,11 @@ export interface IUserUpdate {
   actived_at?: Date
 }
 
+// Find All
+export interface IUsersResponse {
+  users: User[]
+}
+
 export interface IUsersRepository extends IRepository<User> {
   findByEmail(email: string): Promise<User | null>
-  // save(data: IUserUpdate): Promise<User>
 }
