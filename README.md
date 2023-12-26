@@ -16,11 +16,11 @@ Base Application - template
 # Indice
 
 - [About](#-about)
-- [Tecnologies](#-tech)
-- [Instalation](#-install)
-- [Run application](#-run)
-- [Branch patterns ](#-branch)
-- [Developers ](#-devs)
+- [Tecnologies](#-tecnologies)
+- [Instalation](#-instalation)
+- [Run application](#-run-application)
+- [Branch patterns ](#-branch-patterns)
+- [Devs ](#-devs)
 
 
 ## 🔖&nbsp; About
@@ -89,6 +89,6 @@ Follow the Conventional Commits:
 ```
 
 ---
-## Developers
+## Devs
 Developed :bowtie: by Hugo Almeida
 For support or suggestions : hugoalmeidahh@gmail.com
