@@ -1,7 +1,7 @@
 import { compare } from 'bcryptjs'
 import { IUsersRepository } from '../users/interfaces'
 import { IAuthLoginRequest, IAuthLoginResponse } from './interfaces'
-import { InvalidCredentialsError } from '@/core/Errors'
+import { InvalidCredentialsError } from '@/core/errors'
 
 export class AuthenticateServices {
   constructor(private usersRepository: IUsersRepository) {}

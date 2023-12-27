@@ -6,6 +6,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
   "scripts": {
     "start:dev": "tsx watch src/server.ts",
     "start": "node build/server.js",

@@ -16,12 +16,16 @@ Backend base application 🚀 - template
 
 ## Indice
 
-- [About](#-about)
-- [Tecnologies](#-tecnologies)
-- [Instalation](#-instalation)
-- [Run application](#-run-application)
-- [Branch patterns ](#-branch-patterns)
-- [Autor ](#-autor)
+- [Indice](#indice)
+- [🔖  About](#-about)
+- [💻  Tecnologies](#-tecnologies)
+- [🛠️  Instalation](#️-instalation)
+- [🏃  Run application](#-run-application)
+- [🏃  Routes](#-routes)
+- [✨  Branch patterns](#-branch-patterns)
+- [✨  Patterns Commit - Commitlint](#-patterns-commit---commitlint)
+  - [Conventional Commits types for using::](#conventional-commits-types-for-using)
+- [🦸  Autor](#-autor)
 
 
 ## 🔖&nbsp; About
@@ -53,6 +57,11 @@ npm install
 docker-compose up
 ```
 
+1. Need run the seed script, for populate the database with users!
+```bash
+npx prisma db seed -- --environment development
+```
+
 ## 🏃&nbsp; Run application
 ```bash
 npm run start:dev # development
@@ -64,6 +73,16 @@ npm run start:dev # development
 npm run test:dev # watch mode
 npm run test #ci
 ``` -->
+
+## 🏃&nbsp; Routes
+- [POST]: /login (public)
+- [GET]:  /users (private) 
+- [POST]: /users (private)
+
+```
+PS: For private routes, you need to make the login and get the token for authorization. 
+Add in the headers: Authorization: Bearer {token}.
+```
 
 ## ✨&nbsp; Branch patterns 
 Follow this patterns:
