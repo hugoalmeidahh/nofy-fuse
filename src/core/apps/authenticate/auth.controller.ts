@@ -10,7 +10,6 @@ async function login(request: FastifyRequest, reply: FastifyReply) {
   try {
     const AuthSrv = makeAuthServices()
     const { user } = await AuthSrv.login(loginBodySchema)
-
     const token = await reply.jwtSign(
       {
         role: user.role,
@@ -27,7 +26,6 @@ async function login(request: FastifyRequest, reply: FastifyReply) {
     if (error instanceof InvalidCredentialsError) {
       return reply.status(STATUS.BAD_REQUEST).send(error)
     }
-
     throw error
   }
 }
