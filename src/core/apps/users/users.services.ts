@@ -7,12 +7,12 @@ import {
   ISaveUsersResponse,
   IUserResponse,
   IUsersResponse,
-} from './interface'
-import { UsersPrismaRepository } from './repositories/prisma/users.prisma.repository'
+  IUsersRepository,
+} from './interfaces'
 import { hash } from 'bcryptjs'
 
 export class UserServices {
-  constructor(private usersRepository: UsersPrismaRepository) {}
+  constructor(private usersRepository: IUsersRepository) {}
 
   async register({
     name,

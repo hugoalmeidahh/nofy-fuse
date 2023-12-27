@@ -1,8 +1,7 @@
 import { STATUS } from '@/core/constants'
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { makeUserRegisterServices } from './factories'
-import { RegisterBodySchemaValidation } from './validation'
-import { prisma } from '@/core/database/prisma'
+import { RegisterBodySchemaValidation } from './validations'
 
 const UserSrv = makeUserRegisterServices()
 

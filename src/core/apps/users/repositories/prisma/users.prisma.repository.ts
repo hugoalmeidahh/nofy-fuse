@@ -1,6 +1,6 @@
-import { prisma } from 'src/core/database/prisma'
+import { prisma } from '@/core/database/prisma'
 import { Prisma } from '@prisma/client'
-import { IUsersRepository } from '../../interface'
+import { IUsersRepository } from '../../interfaces'
 
 export class UsersPrismaRepository implements IUsersRepository {
   async findAll() {

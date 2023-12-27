@@ -1,5 +1,5 @@
 import { User } from '@prisma/client'
-import { IRepository } from 'src/core/database/iRepository'
+import { IRepository } from '@/core/database/iRepository'
 
 // Register
 export interface IRegisterUsersRequest {

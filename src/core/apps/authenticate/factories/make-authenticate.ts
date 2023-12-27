@@ -1,6 +1,8 @@
-export function makeAuthenticate() {
-  const usersRepository = new PrismaRepository()
-  const authenticateServices = new AuthenticateServices(usersRepository)
+import { UsersPrismaRepository } from '../../users/repositories/prisma/users.prisma.repository'
+import { AuthServices } from '../auth.services'
 
-  return authenticateServices
+export function makeUserRegisterServices() {
+  const userRepository = new UsersPrismaRepository()
+  const services = new AuthServices(userRepository)
+  return services
 }
