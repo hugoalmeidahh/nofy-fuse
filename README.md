@@ -4,15 +4,8 @@
     <img width="200" src="./nofy_fuse.png">
 </h1>
 <h3 align="center">
-    
 Backend base application 🚀 - template
 </h1>
-
-
-<!-- 
-<h3 align="center">
-    <a href="">Acessar a demonstração</a>
-<h3 > -->
 
 ## Indice
 
@@ -75,13 +68,13 @@ npm run test #ci
 ``` -->
 
 ## 🏃&nbsp; Routes
-- [POST]: /login (public)
-- [GET]:  /users (private) 
-- [POST]: /users (private)
+- '[POST]': /login (public)
+- '[GET]':  /users (private) 
+- '[POST]': /users (private)
 
-```
-PS: For private routes, you need to make the login and get the token for authorization. 
-Add in the headers: Authorization: Bearer {token}.
+```bash
+PS: # For private routes, you need to make the login and get the token for authorization. 
+      # Add in the headers: Authorization: Bearer {token}.
 ```
 
 ## ✨&nbsp; Branch patterns 
